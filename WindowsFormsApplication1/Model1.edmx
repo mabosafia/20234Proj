@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Seera_BooksModel.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=D:\mywork\fouda\2020\Seera_Books_To_Prog\Seer_Books_sqlite\Seera_Books.sqlite" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="integer" Nullable="false" />
+          <Property Name="TextData" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TextData2" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="ParagraphID" Type="integer" />
+          <Property Name="DocID" Type="integer" />
+          <Property Name="Part" Type="integer" />
+          <Property Name="PageFrom" Type="integer" />
+          <Property Name="PageTo" Type="integer" />
+          <Property Name="MainPageId" Type="integer" />
+          <Property Name="IsHamesh" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="treeId" Type="integer" />
+          <Property Name="TextData_html" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="TextData2_html" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="SubjectLinks" Type="nvarchar" MaxLength="2147483647" />
+          <Property Name="GegLinks" Type="nvarchar" MaxLength="2147483647" />
+        </EntityType>
+        <EntityContainer Name="Seera_BooksModelStoreContainer">
+          <EntitySet Name="Pages" EntityType="Self.Pages" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Seera_BooksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Pages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int64" Nullable="false" />
+          <Property Name="TextData" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TextData2" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="ParagraphID" Type="Int64" />
+          <Property Name="DocID" Type="Int64" />
+          <Property Name="Part" Type="Int64" />
+          <Property Name="PageFrom" Type="Int64" />
+          <Property Name="PageTo" Type="Int64" />
+          <Property Name="MainPageId" Type="Int64" />
+          <Property Name="IsHamesh" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="treeId" Type="Int64" />
+          <Property Name="TextData_html" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="TextData2_html" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="SubjectLinks" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+          <Property Name="GegLinks" Type="String" MaxLength="2147483647" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityContainer Name="Seera_BooksEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Pages" EntityType="Self.Pages" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Seera_BooksModelStoreContainer" CdmEntityContainer="Seera_BooksEntities">
+          <EntitySetMapping Name="Pages">
+            <EntityTypeMapping TypeName="Seera_BooksModel.Pages">
+              <MappingFragment StoreEntitySet="Pages">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="TextData" ColumnName="TextData" />
+                <ScalarProperty Name="TextData2" ColumnName="TextData2" />
+                <ScalarProperty Name="ParagraphID" ColumnName="ParagraphID" />
+                <ScalarProperty Name="DocID" ColumnName="DocID" />
+                <ScalarProperty Name="Part" ColumnName="Part" />
+                <ScalarProperty Name="PageFrom" ColumnName="PageFrom" />
+                <ScalarProperty Name="PageTo" ColumnName="PageTo" />
+                <ScalarProperty Name="MainPageId" ColumnName="MainPageId" />
+                <ScalarProperty Name="IsHamesh" ColumnName="IsHamesh" />
+                <ScalarProperty Name="treeId" ColumnName="treeId" />
+                <ScalarProperty Name="TextData_html" ColumnName="TextData_html" />
+                <ScalarProperty Name="TextData2_html" ColumnName="TextData2_html" />
+                <ScalarProperty Name="SubjectLinks" ColumnName="SubjectLinks" />
+                <ScalarProperty Name="GegLinks" ColumnName="GegLinks" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
