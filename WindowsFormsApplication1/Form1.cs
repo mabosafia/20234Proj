@@ -26,7 +26,7 @@ namespace WindowsFormsApplication1
         {
             
             var context = new Seera_BooksEntities();
-             
+            //https://blogs.incyclesoftware.com/2014/03/using-git-team-foundation-server-visual-studio-2013/
             var mpages = context.Pages.ToList();
             StreamReader xmlContent = new StreamReader(System.IO.Directory.GetCurrentDirectory() + "\\XMLFile1.xml");
             StreamReader XslContent = new StreamReader(System.IO.Directory.GetCurrentDirectory() + "\\XSLTFile1.xslt");
