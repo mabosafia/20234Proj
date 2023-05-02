@@ -33,6 +33,7 @@ namespace WindowsFormsApplication1
             string xsltempl = XslContent.ReadToEnd();
             for  (int i= 0 ; i< mpages.Count;i++)
             {
+                //new line
                 string TextData = TransformXMLToHTML(mpages[i].TextData, xsltempl);
                 string TextData2 = TransformXMLToHTML(mpages[i].TextData2, xsltempl);
                 TextData = TextData.Replace("openrow", "<tr>");
